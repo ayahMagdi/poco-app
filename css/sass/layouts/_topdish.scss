@@ -1,0 +1,60 @@
+.top__dishes{
+    width: 48%;
+    border-radius: 30px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    @include responsive(767px){width: 100%;}
+    .top__dish{
+        &__wrapper{
+           background-color: #f7f2e285;
+           border-radius: 30px;
+           padding: 10px;
+           display: flex;
+           align-items: center;
+           img{
+               width: 110px;
+           }
+           .box__info{
+               flex: 1;
+               h4{
+                   font-weight: 900;
+                   margin: 0;
+                   cursor: pointer;
+                   font-size: 16px;
+                   color: $blackcolor;
+                   &:hover{color:#FFC222}
+               }
+               .dish__type{
+                   margin: 7px 0;
+                   cursor: pointer;
+                   font-size: 13px;
+                   display: block;
+                   color: #808080;
+                   text-transform: capitalize;
+                   &:hover{color: #FFC222;}
+               }
+               p{
+                   font-weight: 900;
+                   color: #FFC222;
+                   font-size: 15px;
+                   margin: 0;
+               }
+           }
+           .box__icon{
+               transform: translateY(95%);
+               margin-right: 4px;
+               background-color: #FFC222;
+               border-radius: 15px;
+               padding: 8px;
+               transition: .3s;
+               cursor: pointer;
+               &:hover{background-color: #eeac00}
+               .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                   font-size: 23px;
+                   color: $blackcolor;
+                   &:hover{color: #FFF;}
+               }
+           }
+        }
+      }
+}

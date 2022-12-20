@@ -1,0 +1,83 @@
+.main__four{
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/slider1-h4.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .content__wrapper{
+        display: flex;
+        align-items: center;
+        @include responsive(1200px){justify-content: center;}
+        &__info{
+            width: 50%;
+            text-align: center;
+            @include responsive(1200px){width: 100%;}
+            .main__img{
+                text-align: right;
+                @include responsive(767px){display: none;}
+                img{
+                   @include responsivemin(1201px){transform: translate(30% ,30%);}
+                }
+            }
+            .title__bg{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/shap1-slider-h4.png);
+                background-repeat: no-repeat;
+                padding: 0 20px 30px 20px;
+                @include responsive(1200px){width: fit-content;margin: 0 auto;}
+                @include responsive(767px){background: none;padding: 0;}
+                .title{
+                    margin: 0;
+                    color: #FFF;
+                    text-transform: uppercase;
+                    font-size: 4.5rem;
+                    line-height: 115px;
+                    @include responsive(1200px){padding: 0 20px;}
+                    @include responsive(767px){font-size: 28px;line-height: 30px;padding-bottom: 10px;}
+                }
+            }
+            .alt__title__bg{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/shap2-slider-h4.png);
+                background-repeat: no-repeat;
+                padding: 20px;
+                background-position: center center;
+                margin-top: -42px;
+                @include responsive(767px){background: none;padding: 0;margin: 0;}
+                .alt__title{
+                    margin: 0;
+                    font-size: 40px;
+                    color: #00a149;
+                    font-weight: 900;
+                    @include responsive(767px){font-size: 28px;}
+                }
+            }
+            .description{
+                color: #FFF;
+                width: 60%;
+                font-size: 20px;
+                line-height: 1.6;
+                margin: 30px auto;
+                @include responsive(767px){width: 100%;font-size: 17px;margin: 15px 0;}
+            }
+            button{
+                margin-bottom: 30px;
+                background-color: #FFC222;
+                border: none;
+                width: 160px;
+                height: 55px;
+                border-radius: 6px;
+                font-size: 15px;
+                text-transform: uppercase;
+                font-weight: bold;
+                transition: .5s;
+                cursor: pointer;
+                @include responsive(767px){margin-bottom: 0;}
+                &:hover{
+                    color: #FFF;
+                    background-color: #eeac00;
+                }
+            }
+        }
+    }
+}

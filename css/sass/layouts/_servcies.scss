@@ -1,0 +1,91 @@
+.servcies{
+    background-color: #f7f4ef;
+    width: 100%;
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/image8-h4.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+    &__bg__top{
+        position: absolute;
+        top: 15%;
+        right: 0;
+        img{transform: translateX(60%);}
+    }
+    &__bg__bottom{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        img{transform: translate(-25%, 40%);}
+    }
+    &__container{
+        position: relative;
+        width: 100%;
+        .servcies__content{
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            > .alt__title{
+                font-size: 33px;
+                font-weight: normal;
+                margin: 0 0 10px 0;
+                text-transform: capitalize;
+                font-family: "Norican", cursive;
+                color: #FCC222;
+                @include responsive(767px){font-size: 30px;}
+                @include responsive(550px){font-size: 24px;}
+            }
+            > .title{
+                margin: 0;
+                color: #1E1D23;
+                font-size: 44px;
+                text-transform: capitalize;
+                font-weight: 900;
+                @include responsive(767px){font-size: 36px;}
+                @include responsive(550px){font-size: 32px;}
+            }
+            .content__wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 30px;
+                margin-top: 40px;
+                @include responsive(767px){flex-wrap: wrap;justify-content: center;}
+                .ser__box{
+                    background-color: #FFF;
+                    border-radius: 8px;
+                    padding: 50px;
+                    transition: .3s;
+                    @include responsive(1024px){padding: 35px}
+                    &:hover{background-color: #fbf7e8;}
+                    .icon{
+                        border-radius: 50%;
+                        background-color: #FCC222;
+                        width: 95px;
+                        height: 95px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 auto;
+                        @include responsive(550px){width: 85px;height: 85px;}
+                        .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 65px;@include responsive(550px){font-size: 55px;}}
+                    }
+                    .title{
+                        color: #1E1D23;
+                        font-size: 20px;
+                        font-weight: 700;
+                        margin: 20px 0;
+                        @include responsive(1024px){margin: 10px 0;}
+                    }
+                    .description{
+                        color: #808080;
+                        line-height: 1.6;
+                        width: 80%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+}

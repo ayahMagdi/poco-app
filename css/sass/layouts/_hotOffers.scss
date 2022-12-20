@@ -1,0 +1,54 @@
+.hot__offers{
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/background_footer2a.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 60px 0;
+    &__wrapper{
+        text-align: center;
+        h3{
+            text-transform: capitalize;
+            font-size: 25px;
+            color: #1E1D23;
+            margin: 0 0 20px 0;
+            @include responsive(550px){font-size: 20px;}
+        }
+        .hot__offers__input{
+            width: 50%;
+            margin: 0 auto;
+            position: relative;
+            @include responsive(767px){width: 90%;}
+            input{
+                width: 100%;
+                padding: 25px;
+                text-transform: capitalize;
+                border: none;
+                border-radius: 5px;
+                @include responsive(550px){padding: 20px;}
+            }
+            button{
+                position: absolute;
+                right: 7px;
+                top: 50%;
+                cursor: pointer;
+                transform: translateY(-50%);
+                width: fit-content;
+                background: #FCC222;
+                border: none;
+                padding: 20px 35px;
+                text-transform: uppercase;
+                font-weight: 700;
+                border-radius: 5px;
+                @include responsive(550px){padding: 15px 30px;}
+                &:hover{
+                    color: #FFF;
+                    background-color: #eeac00;
+                }
+            }
+            p{
+                @include responsive(550px){font-size: 14px;margin: 20px 0 0 0;}
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.rating{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    ul{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        margin-right: 5px;
+        .star{
+            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                font-size: 17px;
+                color: #999999;
+            }
+            &-fill{
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                    color: #fc0;
+                } 
+            }
+       }
+    }
+    span{
+        text-transform: capitalize;
+        color: #999999;
+        font-size: 13px;
+    }
+}

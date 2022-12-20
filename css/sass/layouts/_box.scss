@@ -1,0 +1,44 @@
+.section__bottom{
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+    .content__box{
+        border: 3px dashed #e5e5e5;
+        border-radius: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 25px 20px;
+        transition: .5s;
+        gap: 20px;
+        @include responsive(767px){
+            text-align: center;
+            flex-direction: column;
+        }
+        &:hover{
+            border-color: #FCC222;
+        }
+        .icon{
+            color: #FCC222;
+            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 65px;}
+        }
+        .info{
+            .title{
+                margin: 0;
+                margin-bottom: 7px;
+                font-size: 18px;
+                color: #000;
+                font-weight: 800;
+            }
+            .description{
+                margin: 0;
+                color: gray;
+                line-height: 1.6;
+                font-size: 15px;
+            }
+        }
+    }
+}

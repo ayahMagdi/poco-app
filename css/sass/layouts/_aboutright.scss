@@ -1,0 +1,39 @@
+.aboutright{
+    width: 55%;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include responsive(767px){
+        width: 100%;
+        order: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center!important;
+    }
+    &.order{
+         order: -1;
+         justify-content: flex-start;
+         .about__bg{top: -25px}
+    }
+    .about__bg{
+        width: 100%;
+        height: 100%;
+        background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/about-imager-4.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include responsive(767px){display: none;}
+    }
+    .main__img{
+        // padding: 125px 0;
+        img{
+            width: 100%;
+            @include responsive(550px){transform: scale(.9);}
+        }
+    }
+}

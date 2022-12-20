@@ -1,0 +1,40 @@
+.search__content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
+    z-index: 2222;
+    display: flex;
+    padding-top: 200px;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s;
+    transform: scale(0);
+    max-width: 100%;
+    &.show{
+        transform: scale(1);
+        opacity: 1;
+    }
+    .close{
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        border: 1px solid #1E1D23;
+        border-radius: 50%;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 22px!important}
+    }
+    .search__input{
+        position: relative;
+        width: 45%;
+        @include responsive(767px){width: 90%;}
+    }
+}

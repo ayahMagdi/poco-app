@@ -1,0 +1,113 @@
+.productTop{
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/breadcrumb1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left{
+        display: flex;
+        align-items: center;
+        a{text-decoration: none;}
+        p{
+            margin: 0;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            color: #999999;
+            cursor: pointer;
+            transition: .3;
+            &.title{
+                color: #000;
+                cursor: auto;
+            }
+            &:hover span{
+                color: #eeac00;
+            }
+            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 18px;}
+        }
+    }
+    &__right{
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       .arrow{
+        position: relative;
+        background-color: #ffc222;
+        border-radius: 50%;
+        width: 34px;
+        cursor: pointer;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        transition: .3s;
+        justify-content: center;
+        .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 18px;}
+        &:hover{
+            background-color: #eeac00;
+        }
+        &.arrow__right:hover > a{
+            opacity: 1;
+            visibility: visible;
+            @include responsive(767px){display: none;}
+        }
+        &.arrow__left:hover > a{
+            opacity: 1;
+            visibility: visible;
+            @include responsive(767px){display: none;}
+        }
+        a{
+            position: absolute;
+            visibility: hidden;
+            top: 50px;
+            right: 0;
+            background-color: #FFF;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 30px 0 rgb(0 0 0 / 10%);
+            transition: .3s;
+            opacity: 0;
+            cursor: pointer;
+            
+            .productChild{
+                display: flex;
+                align-items: center;
+                img{
+                    width: 70px;
+                    margin-right: 10px;
+                }            div{
+                    h4{
+                        font-weight: 900;
+                        font-size: 16px;
+                        text-transform: capitalize;
+                        white-space: nowrap;
+                        margin: 0;
+                        margin-bottom: 7px;
+                        color: #1E1D23;
+                        &:hover{color: #ffc222;}
+                    }
+                    p{
+                        margin: 0;
+                        span{
+                            display: inline-block;
+                            &.current__price{
+                                font-weight: 900;
+                                margin-right: 7px;
+                            }
+                            &.old__price{
+                                text-decoration: line-through;
+                                // font-weight: 900;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+       }
+    }
+}

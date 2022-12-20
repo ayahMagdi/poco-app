@@ -1,0 +1,52 @@
+.aboutleft{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    @include responsive(767px){
+        text-align: center;
+        width: 100%;
+    }
+    .alt__title{
+        font-size: 27px;
+        font-weight: normal;
+        margin: 0;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        font-family: "Norican", cursive;
+        color: #FCC222;
+        @include responsive(767px){font-size: 20px;}
+    }
+    .title{
+        margin: 0;
+        color: #1E1D23;
+        font-size: 45px;
+        font-weight: 900;
+
+        @include responsive(767px){font-size: 28px;}
+    }
+    .description{
+        color: #808080;
+        margin: 25px 0 35px 0;
+        // font-size: 18px;
+        line-height: 1.8;
+        @include responsive(767px){margin: 20px 0;}
+        @include responsive(550px){font-size: 15px;}
+    }
+    button{
+        background-color: #FFC222;
+        border: none;
+        padding: 20px 35px;
+        border-radius: 6px;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: .5s;
+        cursor: pointer;
+        @include responsive(550px){font-size: 13px;padding: 15px 25px;}
+        &:hover{
+            color: #FFF;
+            background-color: #eeac00;
+        }
+    }
+}

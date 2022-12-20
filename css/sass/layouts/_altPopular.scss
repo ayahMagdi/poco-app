@@ -1,0 +1,16 @@
+.alt__popular{
+    padding: 80px 0;
+    overflow: hidden;
+    // @include responsive(1200px){}
+    .dishes__content{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(280px , 1fr));
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+    }
+    .center{
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+}

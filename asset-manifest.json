@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/poco-app/static/js/main.0877a24c.js",
+    "static/js/787.84c4a033.chunk.js": "/poco-app/static/js/787.84c4a033.chunk.js",
+    "index.html": "/poco-app/index.html",
+    "main.0877a24c.js.map": "/poco-app/static/js/main.0877a24c.js.map",
+    "787.84c4a033.chunk.js.map": "/poco-app/static/js/787.84c4a033.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.0877a24c.js"
+  ]
+}

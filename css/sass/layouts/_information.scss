@@ -1,0 +1,68 @@
+.information{
+    padding: 80px 0;
+    background-color: #f7f2e2;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+        justify-content: center;
+        gap: 30px;
+        .information__box{
+            @include ds-flex(flex , space-between , center , 0);
+            width: 100%;
+            background-color: #FFF;
+            padding: 30px 40px; 
+            border-radius: 6px;
+            @include responsive(550px){padding: 20px;}
+            &.box__two{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/h1_banner2.jpg);
+                color: #FFF;
+                .info__price{color: $maincolor}
+            }
+            &.box__three{
+                .info__contact{
+                    color: $maincolor;
+                    margin-top: 40px;
+                    font-weight: 900;
+                }
+            }
+            &:hover .box__bg{
+                transform: scale(1.2);
+                @include responsive(550px){transform: scale(1.1);}
+            }
+            .info{
+                @include responsive(550px){width: 50%;}
+                &__title{
+                    font-size: 27px;
+                    margin: 0;
+                    @include responsive(550px){font-size: 22px;}
+                }
+                &__description{
+                    font-size: 12px;
+                    margin: 10px 0;
+                    line-height: 1.8;
+                }
+                &__price{
+                    color: $altcolor;
+                    font-weight: 900;
+                    font-size: 18px;
+                    @include responsive(550px){margin: 0;}
+                }
+            }
+            .image{
+                position: relative;
+                @include responsive(550px){width: 50%;}
+                .box__bg{
+                    transition: .3s;
+                    @include responsive(550px){width: 100%;}
+                }
+                .box__img{
+                    position: absolute;
+                    top: 50%;
+                    left: 40%;
+                    transform: translate(-50% , -50%);
+                    @include responsive(550px){width: 100%;}
+                }
+            }
+        }
+    }
+}

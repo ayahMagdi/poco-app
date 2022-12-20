@@ -1,0 +1,21 @@
+.section__wrapper.section__content-dish{
+    padding: 90px 0;
+    position: relative;
+    @include responsive(1200px){overflow: hidden;}
+    .dish__slider{
+        @include responsive(1200px){overflow: hidden;}
+        .container{
+            padding: 0;
+        }
+    }
+
+    .slick-prev{left: -45px;}
+    .slick-next{right: -34px;}
+    .slick-next:before, .slick-prev:before{font-size: 38px;
+        color: #00000075;}
+   .slick-slider .slick-list, .slick-slider .slick-track{ 
+      display: flex;
+      gap: 20px;
+      @include responsive(767px){gap: 0;}
+   }
+}

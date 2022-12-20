@@ -1,0 +1,17 @@
+.popular__dishes__products{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 20px;
+    &.alt__grid{
+        grid-template-columns: repeat(auto-fill, minmax(435px, 1fr));
+        justify-content: center;
+        @include responsive(550px){grid-template-columns: repeat(auto-fill , minmax(340px , 1fr));}
+    }
+}
+.show-more-button{
+    margin: 50px auto;
+    width: fit-content;
+    display: block;
+    padding: 17px 30px;
+    &.hide{display: none;}
+}

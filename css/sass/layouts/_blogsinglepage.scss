@@ -1,0 +1,84 @@
+.blogsinglepage{
+    .sectionTop{
+        justify-content: flex-start;
+        min-height: auto;
+        &__wrapper{
+            justify-content: flex-start;
+            &__title{display: none;}
+            .sectionTop__wrapper__desc{
+                width: 100%;
+            }
+        }
+    }
+    .blogsinglecontent{
+        padding: 70px 0;
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            gap: 2%;
+            .blogsingleleft{
+                width: 73%;
+                @include responsive(992px){width: 100%;}
+                .card{
+                    &__body{
+                        &__title{
+                            font-size: 30px;
+                            cursor: auto;
+                            &:hover{color: initial;}
+                            @include responsive(550px){font-size: 25px;}
+                        }
+                        &__quote{
+                            color: #1E1D23;
+                            font-weight: 500;
+                            font-size: 18px;
+                            line-height: 1.6;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                                font-size: 70px;
+                                transform: rotate(180deg);
+                                color: #FCC222;
+                                @include responsive(550px){display: none}
+                            }
+                        }
+                    }
+                    button{display: none;}
+                }
+                .blognextprev{
+                    margin: 40px 0;
+                    background-color: #f7f4ef;
+                    padding: 25px 30px;
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include responsive(550px){flex-direction: column;gap: 20px;}
+                    .blogprev,.blognext{
+                        width: 50%;
+                        @include responsive(550px){width: 100%;}
+                        span{
+                            text-transform: uppercase;
+                            color: #808080;
+                            font-size: 12px;
+                        }
+                        .title{
+                            color: #1E1D23;
+                            margin: 0;
+                            margin-top: 10px;
+                            cursor: pointer;
+                            font-weight: 800;
+                            &:hover{color: #FCC222;}
+                            @include responsive(550px){margin-top: 5px;font-size: 17px;}
+                        }
+                    }
+                    .blognext{text-align: right;@include responsive(550px){text-align: left;}}
+                }
+            }
+            .blogcontainerright{
+                width: 25%;
+                @include responsive(992px){display: none;}
+            }
+        }
+    }
+}

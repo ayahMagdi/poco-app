@@ -1,0 +1,84 @@
+.cartContentRight{
+    width: 30%;
+    background: #FFF;
+    border: 1px solid #FCC222;
+    border-radius: 10px;
+    padding: 20px;
+    @include responsive(767px){width: 100%;}
+    .promocode{
+        position: relative;
+        .promocode__p{
+            margin: 0;
+            color: #1E1D23;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        input{
+            width: 100%;
+            padding: 15px;
+            background-color: #fcc22221;
+            border-radius: 6px;
+            text-transform: uppercase;
+            color: #818a91;
+            border: none;
+        }
+        button{
+          position: absolute;
+          border-radius: 5px;
+          background-color: #FFC222;
+          margin: 2px;
+          top: 28px;
+          right: 0;
+          padding: 13px 25px;
+          text-transform: uppercase;
+          font-weight: 900;
+          transition: 0.5;
+          cursor: pointer;
+          border: none;
+          &:hover{color: #FFF;}
+        }
+        div.checkout__info{
+            div{
+                display: flex;
+                justify-content: space-between;
+                margin: 20px 0;
+                align-items: center;
+                &.subtotal{
+                    border-top: 1px solid #cabbbb87;
+                    padding: 15px 0;
+                    margin: 10px 0;
+                    p , span{
+                        font-size: 20px;
+                        font-weight: 900;
+                        color: #1E1D23;
+                        margin: 0;
+                    }
+                }
+                p{
+                    color: #808080;
+                    margin: 0;
+                }
+                span{
+                    color: #808080;
+                    font-weight: 700;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    .checkout{
+        padding: 15px;
+        border-radius: 10px;
+        background: #FCC222;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: capitalize;
+        width: 100%;
+        &:hover{
+            color: #FFF;
+            background-color: #eeac00;
+        }
+    }
+}

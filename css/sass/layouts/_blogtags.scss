@@ -1,0 +1,33 @@
+.blogtags{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .title{
+        border-bottom: 1px dashed #e5e5e5;
+        margin: 0;
+        margin-bottom: 20px;
+        color: #1E1D23;
+        font-size: 20px;
+        font-weight: 800;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+    }
+    .blogtags__wrapper{
+       .tag{
+           display: flex;
+           align-items: center;
+           gap: 8px;
+           margin-bottom: 8px;
+           span{
+              display: block;
+              color: #1E1D23;
+              font-size: 14px;
+              font-weight: 500;
+              cursor: pointer;
+              border-radius: 15px;
+              border: 1px solid #e5e5e5;
+              padding: 4px 20px;
+              &:hover{border-color: #FCC222;}
+           }
+       }
+    }
+}

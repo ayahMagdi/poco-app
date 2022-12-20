@@ -1,0 +1,43 @@
+@import '../helpers/mixins';
+@import '../helpers/variables';
+.address{
+    background-color: $blackcolor;
+    color: #FFF;
+    position: relative;
+    z-index: 9;
+    @include responsive(767px){display: none}
+    .address-wrapper{
+        @include ds-flex(flex , space-between , center , 0);
+        width: 100%;
+        .address-left{
+            @include ds-flex(flex , flex-start , center , 40px);
+            .location{
+                @include ds-flex(flex , flex-start , center , 0);
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                    font-size: 20px!important;
+                }
+                p{
+                    margin: 0;
+                    margin-left: 8px;
+                    font-size: 13px;
+                    span{
+                        text-transform: uppercase;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        .address-right{
+            .social-links{
+               @include ds-flex(flex , flex-start , center , 20px);
+               a{
+                color: #FFF;
+                font-size: 12px;
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                    font-size: 15px!important;
+                }
+               }
+            }
+        }
+    }
+}

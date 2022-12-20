@@ -1,0 +1,166 @@
+.productInfo{
+    padding: 50px 0;
+    .wrapper__title{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 10px;
+       margin-bottom: 50px;
+       .productInfo__title{
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: capitalize;
+            cursor: pointer;
+            color: #1E1D23;
+            padding: 18px 30px;
+            border-radius: 10px;
+            transition: .3s;
+            @include responsive(767px){padding: 13px 23px;font-size: 18px;}
+            &.active,
+            &:hover{background-color: #FFC222;}
+       }
+    } 
+    .productDescription{
+        display: none;
+        @include responsive(767px){font-size: 15px;}
+        &.active{
+            display: block;
+        }
+       .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .description{
+            width: 70%;
+            margin-bottom: 20px;
+            @include responsive(767px){text-align: center;width: 95%;}
+            p{
+                color: gray;
+                line-height: 1.8;
+                margin: 0;
+                margin-bottom: 25px;
+                span{
+                    font-weight: 900;
+                }
+            }
+        }
+        .product__table{
+            width: 70%;
+            position: relative;
+            @include responsive(767px){
+                width: 90%;
+                display: flex;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    background-color: #76666642;
+                    height: 100%;
+                    width: .5px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            .type{
+                border-bottom: 1px solid #76666642;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px 0 40px 0;
+                @include responsive(767px){
+                    width: 50%;
+                    padding: 0;
+                    flex-direction: column;
+                    text-align: center;
+                    border-bottom: none;
+                }
+                div{
+                    text-align: center;
+                    width: 100%;
+                    position: relative;
+                    @include responsive(767px){
+                        height: 120px;
+                        border-bottom: 1px solid #76666642;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        &:last-of-type{border: none;}
+                    }
+                    h3{
+                        margin: 0;
+                        font-size: 30px;
+                        font-weight: 900;
+                        color: $blackcolor;
+                        @include responsive(767px){font-size: 25px;}
+                    }
+                    &:first-child{
+                        text-align: left;
+                        @include responsive(767px){text-align: center;}
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            background-color: #76666642;
+                            height: 350%;
+                            width: .5px;
+                            @include responsive(767px){display: none;}
+                        }
+                        h3{font-size: 20px;margin-bottom: 10px;}
+                    }
+                    span{
+                        display: block;
+                        font-size: 15px;
+                        color: gray;
+                        margin-top: 3px;
+                        @include responsive(767px){font-size: 14px;}
+                    }
+                }
+            }
+            .allergies{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 15px 0;
+                @include responsive(767px){
+                    width: 50%;
+                    padding: 0;
+                    flex-direction: column;
+                    text-align: center;
+                }
+                h3{
+                    font-size: 20px;
+                    margin: 0;
+                    font-weight: 900;
+                    width: 100%;
+                    color: $blackcolor;
+                    @include responsive(767px){
+                        height: 120px;
+                        border-bottom: 1px solid #76666642;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: capitalize;
+                    }
+                }
+                p{
+                    color: gray;
+                    width: 100%;
+                    text-align: center;
+                    @include responsive(767px){
+                        height: 120px;
+                        border-bottom: 1px solid #76666642;
+                        margin: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:last-of-type{border: none;}
+                    }
+                }
+            }
+        }
+       }
+    }
+}
