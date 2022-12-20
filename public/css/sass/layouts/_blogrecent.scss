@@ -1,0 +1,36 @@
+.blogrecent{
+    >.title{
+        border-bottom: 1px dashed #e5e5e5;
+        margin: 0;
+        margin-bottom: 20px;
+        color: #1E1D23;
+        font-size: 20px;
+        font-weight: 800;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+    }
+    .card{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        border: none;
+        margin-bottom: 10px;
+        &:hover img{transform: none;}
+        &__head{
+            overflow: initial;
+            img{
+                width: 110px;
+                object-fit: cover;
+                border-radius: 15px;
+                height: 110px;
+            }
+        }
+        &__body{
+            padding: 0;
+            .card__body__title{font-size: 16px;}
+            .card__body__desc{display: none;}
+            button{display: none;}
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.addedAlarm{
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    &__wrapper{
+        background-color: #0f834d;
+        border-radius: 5px;
+        color: #FFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        p{
+            margin: 0;
+        }
+        div{
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+            border-left: 1px solid #ded2d2bd;
+            padding-left: 18px;
+            cursor: pointer;
+        }
+    }
+}

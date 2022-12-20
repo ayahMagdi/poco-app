@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:wght@200;300;500;600;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+.alt__banner{
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/h2_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    background-position: center center;
+    height: 600px;
+    padding: 80px 0;
+    position: relative;
+    @include responsive(767px){
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        gap: 60px;
+        @include responsive(1200px){align-items: center;gap: 30px;}
+        @include responsive(767px){
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__left{
+            width: 50%;
+            position: relative;
+            height: 100%;
+            @include responsive(767px){
+                width: 100%;
+                height: auto;
+            }
+            .alt__content{
+                position: absolute;
+                transform: translate(-111%, -25%);
+                @include responsive(767px){
+                   display: none
+                }
+            }
+            .main__content{
+                position: relative;
+                .main__img{
+                    width: 100%;
+                    
+                    position: relative;
+                    z-index: 2;
+                    @include responsivemin(1201px){
+                        width: 780px;
+                        transform: translate(-20%, -3%);
+                    }
+                    @include responsive(767px){
+                        width: 100%;
+                        transform: translate(0) scale(.8);
+                    }
+
+                }
+                .alt__img{
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                    right: 0;
+                    @include responsive(767px){
+                        top: 7%;
+                        right: 16%
+                    }
+                }
+            }
+        }
+        &__right{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            @include responsive(767px){width: 100%;height: auto;order: -1;text-align: center;}
+            .alt__content{
+                position: absolute;
+                transform: translate(27%, -17%);
+                @include responsive(1200px){transform: translate(8%, -28%) scale(.8);}
+                @include responsive(767px){transform: translate(27%, -17%);}
+                .img__one{
+                    transform: translate(11%, 70%);
+                    @include responsive(767px){transform: translate(68%, 70%) scale(.7);}
+                   
+                }
+                .img__two{
+                   transform: translate(-6%, -57%) scale(0.6);
+                   @include responsive(767px){display: none;}
+                }
+            }
+            .content__text{
+                height: 100%;
+                padding-top: 50px;
+                @include responsive(767px){
+                    position: relative;
+                    z-index: 2;
+                }
+                .alt__title{
+                    font-size: 5vw;
+                    font-weight: 900;
+                    margin: 0;
+                    text-shadow: 1px 0 5px #000;
+                    position: relative;
+                    line-height: .7;
+                    text-transform: capitalize;
+                    color: #FFF;
+                    font-family: "Norican", cursive;
+                    @include responsive(767px){
+                        margin-left: -26%;
+                        font-size: 36px;
+                        margin-bottom: 15px;
+                    }
+                    @include responsive(550px){font-size: 27px;margin-bottom: 10px;margin-left: -39%;}
+                    span{
+                        display: block;
+                        position: relative;
+                        right: -33%;
+                        top: 14px;
+                        @include responsive(767px){
+                            right: -14%;
+                            top: 6px;
+                        }
+                        @include responsive(550px){right:-18% ;top: 6px;}
+                    }
+
+                }
+                .title{
+                    margin: 0;
+                    color: #FCC222;
+                    font-size: 13vw;
+                    text-transform: capitalize;
+                    line-height: 0.8;
+                    text-shadow: 1px 0 5px #000;
+                    @include responsive(767px){font-size: 7rem;}
+                    @include responsive(550px){font-size: 4.5rem}
+                }
+                .description{
+                    color: #FFF;
+                    margin: 20px 0;
+                    font-size: 25px;
+                    text-shadow: 1px 0 5px #000;
+                    @include responsive(550px){font-size: 18px;line-height: 1.6;}
+                }
+            }
+        }
+    }
+    .img__bottom{
+        position: absolute;
+        bottom: -35px;
+        right: -50px;
+        @include responsive(1200px){display: none;}
+    }
+}

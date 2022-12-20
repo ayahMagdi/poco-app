@@ -1,0 +1,12 @@
+.blogpage-2{
+    .blogpagecontent{
+        padding: 70px 0;
+        .blogcontainerleft{
+            >div{
+                display: grid;
+                grid-template-columns: repeat(auto-fill , minmax(370px , 1fr));
+                gap: 30px;
+            }
+        }
+    }
+}

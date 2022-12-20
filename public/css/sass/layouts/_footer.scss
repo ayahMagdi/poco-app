@@ -1,0 +1,147 @@
+.footer{
+    &.light{
+        .footer__top{
+            background-color: #FFF;
+            .footer__top__logo{
+                border-color: #EBEBEB;
+            }
+            .footer__top__desc{
+                h3{color: $blackcolor;}
+                p{
+                    color: gray;
+                    span{color: inherit;}
+                }
+                .social__links{
+                    li{background-color: $maincolor;}
+                    .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 15px;}
+                }
+                .subscripe{
+                    input{border-color: #ebebeb;}
+                }
+            }
+        }
+        .footer__bottom{
+            background-color: $blackcolor;
+        }
+    }
+   &__top{
+    padding: 50px 0;
+    background-color: #181818;
+    background-image: url('https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/shape_dot.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__logo{
+        position: relative;
+        border-bottom: 1px solid #303030;
+        padding: 30px 0;
+        img{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__desc{
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(285px , 1fr));
+        gap: 30px;
+        margin: 60px 0;
+        .footer__info{
+            text-align: center;
+            width: 100%;
+            &.footer__subscripe{
+                p{line-height: 1.8;}
+            }
+            h3{
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 18px;
+                color: #FFF;
+                margin-bottom: 30px;
+            }
+            p{
+                margin: 10px 0;
+                color: #b0b0b0;
+                &.phone{
+                    font-weight: 900;
+                    color: #FFC222;
+                    margin-top: 25px;
+                    font-size: 21px;
+                }
+                span{color: #FFF}
+            }
+            .social__links{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+                margin-top: 25px;
+                li{
+                    cursor: pointer;
+                    transition: .3s;
+                    background-color: #FFF;
+                    border-radius: 50%;
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        background-color: #FFC222;
+                    }
+                    .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 18px;}
+                }
+            }
+            .subscripe{
+                margin-top: 25px;
+                position: relative;
+                input{
+                    width: 100%;
+                    padding: 18px 0 18px 10px;
+                    border: 1px solid #262626;
+                    background-color: transparent;
+                    border-radius: 3px;
+                    text-transform: capitalize;
+                    color: #818a91;
+                }
+                button{
+                  position: absolute;
+                  border-radius: 5px;
+                  background-color: #FFC222;
+                  top: 50%;
+                  right: 4px;
+                  transform: translateY(-50%);
+                  height: 85%;
+                  padding: 10px 15px;
+                  text-transform: uppercase;
+                  font-weight: 900;
+                  transition: .5;
+                  cursor: pointer;
+                  border: none;
+                  &:hover{color: #FFF;}
+                }
+            }
+        }
+    }
+   }
+   &__bottom{
+    padding: 25px 0;
+    background-color: #00a850;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include responsive(767px){
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include responsive(550px){text-align: center;}
+        p{
+            color: #FFF;
+            span{
+                color: #FFC222;
+                cursor: pointer;
+            }
+        }
+    }
+   }
+}

@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:wght@200;300;500;600;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+.toprecipes{
+    padding: 80px 0;
+    &__wrapper{
+        display: flex;
+        gap: 2%;
+        .toprecipes__dishes{
+            width: 67%;
+            @include responsive(1024px){width: 100%;}
+            &__list{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
+        .toprecipes__info{
+            width: 31%;
+            height: 100%;
+            border-radius: 10px;
+            height: inherit;
+            overflow: hidden;
+            @include responsive(1024px){display: none}
+        }
+    }
+}

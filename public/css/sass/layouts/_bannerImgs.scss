@@ -1,0 +1,40 @@
+.banner__imgs{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(350px , 1fr));
+    justify-content: space-between;
+    align-items: center;
+    // margin-top: -3px;
+    position: relative;
+    z-index: 3;
+    .banner__item{
+        width: 100%;
+        position: relative;
+        height: 260px;
+        @include responsive(767px){height: 400px;}
+        @include responsive(550px){height: 300px;}
+        overflow: hidden;
+        &:hover .banner__bg{transform: scale(1.1)}
+        &:hover .banner__overlay{height: 100%;}
+        .banner__bg{
+            transition: .3s;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @include responsive(767px){background-position: center center;}
+            &.bg__one{background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/img1-h3.jpg);}
+            &.bg__two{background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/img2-h3.jpg);}
+            &.bg__three{background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/img3-h3.jpg);}
+            &.bg__four{background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/08/img4-h3.jpg);}
+        }
+        .banner__overlay{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            transition: .3s;
+            background-color: rgb(0, 0, 0 , .5);
+        }
+    }
+}

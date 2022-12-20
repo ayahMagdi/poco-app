@@ -1,0 +1,139 @@
+.shopfilter{
+    .categories{
+        background-color: #FFF;
+        border-radius: 16px;
+        border: 1px solid #e5e5e5;
+        padding: 15px 10px;
+        .title{
+            color: #1E1D23;
+            margin: 0 0 10px 10px;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+        &__content{
+            background-color: #fbf7e8;
+            border-radius: 16px;
+            .category{
+                border-bottom: 2px dashed #e5e5e5;
+                display: flex;
+                align-items: center;
+                padding: 12px 10px;
+                justify-content: space-between;
+                cursor: pointer;
+                margin: 0 12px;
+                &:last-of-type{border-bottom: none;}
+                p{
+                    margin: 0;
+                    text-transform: capitalize;
+                    color: #808080;
+                    display: flex;
+                    align-items: center;
+                    .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{margin-right: 7px;}
+                    &:hover{color: #FCC222;}
+                }
+                span{color: #808080;}
+            }
+        }
+    }
+    .shoprange{
+       .title__parent{
+            border-bottom: 2px dashed #e5e5e5;
+            margin-bottom: 20px;
+            .title{
+                margin: 0;
+                margin-bottom: 20px;
+                color: #1E1D23;
+                font-size: 20px;
+                font-weight: 800;
+            }
+        }
+       .range__input{
+            width: 100%;
+            height: 5px;
+            position: relative;
+            background: #e5e5e5;
+            border-radius: 5px;
+            .range__slider{
+                position: absolute;
+                top: 0;
+                left: 25%;
+                right: 25%;
+                height: 100%;
+                background: #FCC222;
+                border-radius: 5px;
+            }
+            input[type="range"]{
+               position: absolute;
+               top: 0;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               pointer-events: none;
+               width: 100%;
+               outline: none;
+               background: none;
+               -webkit-appearance: none;
+               &::-webkit-slider-thumb{
+                  -webkit-appearance: none;
+                  pointer-events: auto;
+                  width: 15px;
+                  height: 15px;
+                  border-radius: 50%;
+                  background-color: #FCC222;
+                  top: -2px;
+                  position: relative;
+                  cursor: pointer;
+               }
+
+            }
+
+       }
+    }
+    .bestdishes{
+            >.title{
+                border-bottom: 2px dashed #e5e5e5;
+                margin: 0;
+                margin-bottom: 20px;
+                color: #1E1D23;
+                font-size: 20px;
+                font-weight: 800;
+                padding-bottom: 20px;
+                text-transform: capitalize;
+            }
+            .bestdishes__wrapper{
+                .best__container{
+                    margin-bottom: 10px;
+                    border-radius: 30px;
+                    border: 1px solid #e5e5e5;
+                    display: flex;
+                    align-items: center;
+                    padding: 5px;
+                    gap: 5px;
+                    .head{
+                        padding: 6px;
+                        background-color: #f7f4ef;
+                        border-radius: 30px;
+                        img{
+                            width: 100px;
+                        }
+                    }
+                    .body{
+                        padding: 6px;
+                        .title{
+                            font-size: 14px;
+                            cursor: pointer;
+                            margin: 0 0 10px 0;
+                            color: #1E1D23;
+                            font-weight: 800;
+                            &:hover{color: #FCC222;}
+                        }
+                        .price{
+                            margin: 0;
+                            font-weight: 800;
+                            color: #FCC222;
+                        }
+                    }
+                }
+            }
+    }
+}

@@ -1,0 +1,60 @@
+.contactinformation{
+    padding: 70px 0;
+    .contact__title{
+        @include responsive(767px){text-align: center;}
+        .title{
+            color: $blackcolor;
+            text-transform: capitalize;
+            font-size: 40px;
+            margin: 0;
+            font-weight: 900;
+            letter-spacing: -1.4px;
+            @include responsive(767px){font-size: 30px;}
+        }
+        .description{
+            color: gray;
+            margin: 0;
+            margin-top: 10px;
+            @include responsive(767px){font-size: 15px;}
+        }
+    }
+    .contact__boxs{
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        width: 70%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        @include responsive(767px){flex-direction: column;width: 100%;}
+        .contact__box{
+            // margin-bottom: ;
+            @include responsive(767px){text-align: center;}
+            .icon{
+                margin: 0 0 25px 0;
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                    color: $maincolor;
+                    font-size: 50px;
+                }
+            }
+            .box__title{
+                color: $blackcolor;
+                font-size: 18px;
+                text-transform: capitalize;
+                font-weight: 800;
+
+                margin: 10px 0;
+
+            }
+            .box__description{
+                margin: 0;
+                line-height: 1.8;
+                span{
+                    display: block;
+                    font-size: 16px;
+                    color: gray;
+                }
+            }
+        }
+    }
+}

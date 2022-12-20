@@ -1,0 +1,57 @@
+.card{
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    &:hover img{transform: scale(1.1);}
+    &__head{
+      overflow: hidden;
+      img{
+        width: 100%;
+        transition: .3s;
+      }
+    }
+    &__body{
+        padding: 30px;
+        &__info{
+            color: #999999;
+            font-size: 13px;
+            margin: 0;
+            cursor: pointer;
+            .category{&:hover{color: #FFC222}}
+            .date{&:hover{color: #FFC222}}
+            .author{&:hover span{color: #FFC222}}
+            @include responsive(550px){line-height: 1.8;}
+        }
+        &__title{
+            font-size: 21px;
+            margin: 10px 0;
+            color: #1E1D23;
+            cursor: pointer;
+            &:hover{color: #FFC222;}
+            @include responsive(550px){font-size: 18px;}
+        }
+        &__desc{
+            color: #808080;
+            line-height: 1.8;
+            margin: 0 0 25px 0;
+            @include responsive(550px){font-size: 14px;}
+        }
+        button{
+        background-color: #FFC222;
+        border: none;
+        border-radius: 10px;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 16px 31px;
+        font-size: 14px;
+        cursor: pointer;
+        width: fit-content;
+        transition: .5s;
+        @include responsive(550px){font-size: 13px;padding: 15px 25px;}
+        &:hover{
+          background-color: #eeac00;
+          color: #FFF;
+        }
+        }
+    }
+}

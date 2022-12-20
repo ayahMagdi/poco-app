@@ -1,0 +1,40 @@
+.historyinfo{
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__wrapper{
+        width: 60%;
+        text-align: center;
+        @include responsive(1200px){width: 80%;}
+        @include responsive(767px){width: 90%;}
+        @include responsive(550px){width: 100%;}
+        .alt__title{
+            font-size: 35px;
+            font-weight: normal;
+            margin: 0;
+            text-transform: capitalize;
+            font-family: "Norican", cursive;
+            color: #FCC222;
+            @include responsive(767px){font-size: 30px;}
+            @include responsive(550px){font-size: 25px;}
+        }
+        .title{
+            margin: 0;
+            color: #1E1D23;
+            font-size: 40px;
+            font-weight: 900;
+            width: 52%;
+            margin: 0 auto;
+            @include responsive(767px){font-size: 36px;padding: 0 15px;margin-top: 10px;width: 100%;}
+            @include responsive(550px){font-size: 28px;}
+        }
+        .description{
+            color: #808080;
+            margin: 20px 0 30px 0;
+            line-height: 1.8;
+            @include responsive(767px){margin: 20px 0;}
+            @include responsive(550px){font-size: 15px;padding: 0 15px;}
+        }
+    }
+}

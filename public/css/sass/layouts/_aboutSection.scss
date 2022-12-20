@@ -1,0 +1,21 @@
+.content__container{
+   padding: 60px 0;
+   .aboutsection{
+    @include responsive(767px){
+        &:not(:last-of-type){margin-bottom: 45px;}
+    }
+    .about__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 5%;
+        height: 550px;
+        @include responsive(767px){
+            flex-direction: column;
+            height: auto;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
+}

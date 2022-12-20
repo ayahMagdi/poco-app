@@ -1,0 +1,18 @@
+.pizza__list{
+    padding: 60px 0;
+    @include responsive(1200px){overflow: hidden;}
+    .pizza_list__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+        gap: 20px;
+    }
+    .container{position: relative;}
+    .imgs__wrapper{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+}

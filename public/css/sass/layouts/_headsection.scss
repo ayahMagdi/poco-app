@@ -1,0 +1,36 @@
+.section__head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    @include responsive(767px){flex-direction: column;gap: 7px;}
+    h2{
+        text-transform: capitalize;
+        font-size: 40px;
+        margin: 0;
+        font-weight: 900;
+        color: $blackcolor;
+        @include responsive(767px){font-size: 35px;}
+        @include responsive(550px){font-size: 30px;}
+    }
+    p{
+        display: flex;
+        align-items: center;
+        margin: 0;
+        text-transform: capitalize;
+        cursor: pointer;
+        &:hover{color: #FFC222;}
+        span{
+           color: #FFF;
+           border-radius: 6px;
+           background-color: #00A149;
+           font-size: 10px;
+           margin-left: 5px;
+           padding: 3px;
+           .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+            font-size: 18px;
+            font-weight: 900;
+           }
+        }
+    }
+}

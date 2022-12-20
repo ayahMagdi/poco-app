@@ -1,0 +1,319 @@
+@import '../helpers/mixins';
+@import '../helpers/variables';
+@import '../helpers/components';
+.header{
+    @include ds-flex(flex , flex-start , center , 0);
+    background-color: #FFF;
+    box-shadow: 0 0 10px rgba(33, 32, 32, 0.5);
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    height: 120px;
+    transition: .3s;
+    @include responsive(1024px){height: 70px;}
+    &.blackbg{
+        background-color: $blackcolor;
+        .menuicon,.phoneicon{
+            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{color: #FFF;}
+        }
+    }
+    &.fixedHead{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 75px;
+    }
+    &__wrapper{
+        @include ds-flex(flex, space-between , center , 0);
+        .menuicon{
+            cursor: pointer;
+            display: none;
+            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                color: $blackcolor;
+                &:hover{color: $maincolor;}
+            }
+            @include responsive(1024px){display: block;}
+        }
+        &__logo{
+            width: 120px;
+            cursor: pointer;
+        }
+        .navbar{
+            &.navbar__side{
+                opacity: 1;
+                left: 0;
+            }
+            @include responsive(1024px){
+                position: fixed;
+                z-index: 88;
+                top: 0;
+                left: -100%;
+                height: 100%;
+                background-color: rgba(0,0,0,.7);
+                width: 100%;
+                opacity: 0;
+                transition: .3s;
+                .navbar__content{
+                    width: 45%;
+                    height: 100%;
+                    background-color: #000;
+                    padding: 15px;
+                    .nav__close{
+                        text-align: right;
+                        display: block;
+                        padding: 0 10px;
+                        .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                            font-size: 18px;
+                            cursor: pointer;
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+            @include responsive(550px){
+                .navbar__content{
+                    width: 60%;
+                }
+            }
+            .nav__close{display: none;}
+            &__links{
+                @include ds-flex(flex , flex-start , center , 30px);
+                cursor: pointer;
+                font-weight: bold;
+                @include responsive(1024px){
+                    flex-direction: column;
+                    padding: 5px 0;
+                    gap: 0;
+                    align-items: flex-start;
+                    margin: 0;
+                    >li{
+                        width: 100%;
+                        &:last-of-type{border-bottom: none;}
+                        a:last-of-type li{border-bottom: none;}
+                    }
+                }
+                &.text__light li, &.text__light li a{color: #FFF;}
+                 li{
+                    @include ds-flex(flex , flex-start , center , 5px);
+                    text-transform: capitalize;
+                    position: relative;
+                    transition: .5s;
+                    a{color: $blackcolor;}
+                    &:hover a , &:hover .css-i4bv87-MuiSvgIcon-root ,
+                    &:hover .MuiSvgIcon-root, a.active ~ .MuiSvgIcon-root,
+                    a.active ~ .css-i4bv87-MuiSvgIcon-root , a.active{
+                        color: $maincolor
+                    };
+                    @include responsive(1024px){
+                        padding: 15px 0;
+                        border-bottom: 1px solid #0e0e0e;
+                        justify-content: space-between;
+                        font-weight: normal;
+                        flex-wrap: wrap;
+                        font-size: 15px;
+                        a{color: #FFF;}
+                    }
+                    &:hover >.drobdown{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                        font-size: 18px;
+                        color: inherit;
+                        @include responsive(1024px){
+                            transition: .3s;
+                            color: #FFF!important;
+                            width: 40px;
+                            height: 25px;
+                            border-radius: 5px;
+                            &:hover{background-color: $maincolor}
+                            &.active-icon{
+                                background-color: $maincolor;
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                    .drobdown{
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .5s;
+                        top: 40px;
+                        left: 0;
+                        background-color: #FFF;
+                        border-radius: 6px;
+                        box-shadow: 0 0 30px 0 rgb(0 0 0 / 8%);
+                        padding: 15px 0;
+                        width: 200px;
+                        @include responsive(1024px){
+                            display: none;
+                            position: relative;
+                            width: 100%;
+                            top: 5px;
+                            transition: .5s;
+                            opacity: 1;
+                            visibility: visible;
+                            background-color: #000!important;
+                            padding: 0;
+                            &.dropdownShow{
+                                display: block;
+                            }
+                        }
+                        &.blackbg{
+                            background-color: $blackcolor;
+                            li{color: #FFF;}
+                        }
+                        a.active li,
+                        a:hover li{
+                            background-color: rgba(0,0,0,.03);
+                            color: $maincolor;
+                        }
+                        li{
+                            padding: 10px 20px;
+                            color: initial;
+                            font-weight: normal;
+                            transition: .5s;
+                            font-size: 15px;
+                            color: $blackcolor;
+                            @include responsive(1024px){
+                                color: #FFF;
+                            }
+                        }
+                    }
+                 }
+            }
+        }
+        .header__info{
+            @include ds-flex(flex, flex-start , center , 0);
+            margin-left: 50px;
+            @include responsive(1024px){
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                background: #FFF;
+                width: 100%;
+                margin: 0;
+                border-top: 1px solid #e5e5e5
+            }
+            &__left{
+                @include ds-flex(flex, flex-start , center , 10px);
+                @include responsive(1240px){display: none;}
+                .css-i4bv87-MuiSvgIcon-root, .MuiSvgIcon-root {
+                        color: #00A149;
+                        font-size: 55px;
+                }
+                p{
+                    margin: 0;
+                    color: #FFC222;
+                    font-size: 25px;
+                    font-weight: bold;
+                    &.text__light span{color: #FFF;}
+                    span{
+                        font-size: 13px;
+                        color: #999;
+                        display: block;
+                        margin-bottom: 5px;
+                        font-weight: normal;
+                    }
+                }
+            }
+            &__right{
+                @include ds-flex(flex, flex-start , center , 10px);
+                margin-left: 15px;
+                &.text__light .header__option .css-i4bv87-MuiSvgIcon-root , 
+                &.text__light .header__option .MuiSvgIcon-root{color: #FFF;}
+                @include responsive(1024px){
+                   &.text__light .header__option .css-i4bv87-MuiSvgIcon-root,
+                   &.text__light .header__option .MuiSvgIcon-root{color: $blackcolor;}
+                }
+                @include responsive(1024px){
+                    width: 100%;
+                    justify-content: space-between;
+                    gap: 0;
+                    margin-left: 0;
+                }
+                .header__option{
+                    border-radius: 50%;
+                    border: 1px solid #e5e5e5;
+                    padding: 10px;
+                    cursor: pointer;
+                    position: relative;
+                    transition: all .5s;
+                    p{
+                        display: none;
+                        @include responsive(1024px){
+                            display: block;
+                            font-weight: 700;
+                            margin: 0;
+                            font-size: 13px;
+                            text-transform: capitalize;
+                            color: $blackcolor;
+                        }
+                        @include responsive(550px){font-size: 11px;}
+                    }
+                    a .css-i4bv87-MuiSvgIcon-root , a .MuiSvgIcon-root{color: $blackcolor}
+                    &.header__shop{
+                        display: none;
+                        @include responsive(1024px){display: inherit;}
+                    }
+                    &.sign__in:hover >.signIn{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .header__favourit__count,
+                    .header__basket__count{
+                        @include ds-flex(flex, center , center , 0);
+                        background-color: #FFC222;
+                        border-radius: 50%;
+                        font-size: 10px;
+                        padding: 3px;
+                        font-weight: bold;
+                        width: 15px;
+                        height: 15px;
+                        position: absolute;
+                        top: 7px;
+                        right: 7px;
+                        color: $blackcolor;
+                        @include responsive(1024px){
+                            top: 16%;
+                            right: 37%
+                        }
+                        @include responsive(550px){right: 30%}
+                    }
+                    &:hover{
+                       background-color: #FFC222;
+                       border-color: transparent;
+                    } 
+                    @include responsive(1024px){
+                        @include ds-flex(flex, center , center , 0);
+                        border-radius: 0;
+                        width: 20%;
+                        border: none;
+                        border-right: 1px solid #e5e5e5;
+                        padding: 10px 0;
+                        flex-direction: column;
+                        text-align: center;
+                        .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 27px;}
+                        &:hover{
+                            background-color: inherit;
+                            border-color: #e5e5e5;
+                         } 
+                    }
+                }
+            }
+        }
+        .phoneicon{
+            display: none;
+            @include responsive(1024px){
+                display: block;
+                transform: rotateY(180deg);
+                z-index: -1;
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+                    font-size: 35px;
+                    color: $blackcolor;
+                }
+            }
+        }
+    }
+}

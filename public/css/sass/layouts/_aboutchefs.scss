@@ -1,0 +1,28 @@
+.aboutchefs__container{
+    text-align: center;
+    padding: 70px 0;
+    .alt__title{
+        font-size: 28px;
+        font-weight: normal;
+        margin: 0;
+        text-transform: capitalize;
+        font-family: "Norican", cursive;
+        color: #FCC222;
+        @include responsive(550px){font-size: 25px;}
+    }
+    .title{
+        margin: 0;
+        color: #1E1D23;
+        font-size: 45px;
+        font-weight: 900;
+        @include responsive(550px){font-size: 30px;margin-bottom: 30px;}
+    }
+    .chefs__wrapper{
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            @include responsive(767px){flex-wrap: wrap;justify-content: center;}
+        }
+}

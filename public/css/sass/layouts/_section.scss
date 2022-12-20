@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:wght@200;300;500;600;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+.section{
+    padding: 60px 0;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        @include responsive(767px){flex-direction: column;gap: 20px;}
+        &__left{
+            width: 50%;
+            position: relative;
+            @include responsive(767px){width: 100%;}
+            .section__sale{
+                position: absolute;
+                top: 0;
+                right: 0;
+                img{
+                    @include responsive(550px){transform: scale(.8);}
+                }
+            }
+            .section__content{
+                margin: 0 0 0 -75px;
+                @include responsive(767px){margin: 0;}
+                img{
+                    width: 100%;
+                    @include responsive(767px){transform: scale(.9);}
+                }
+            }
+        }
+        &__right{
+            width: 50%;
+            @include responsive(767px){
+                width: 100%;
+                text-align: center;
+            }
+            .alt__title{
+                font-family: 'Norican', cursive;
+                font-weight: 900;
+                text-transform: capitalize;
+                font-size: 35px;
+                margin: 0;
+                color: #FCC222;
+                @include responsive(767px){font-size: 28px;}
+                @include responsive(550px){font-size: 18px;}
+            }
+            .title{
+                font-weight: 900;
+                font-size: 60px;
+                margin: 0;
+                color: #1E1D23;
+                @include responsive(1024px){font-size: 5vw;}
+                @include responsive(767px){font-size: 28px;line-height: 1.6;}
+                @include responsive(550px){font-size: 18px;}
+            }
+            .description{
+                line-height: 1.8;
+                color: #808080;
+                margin: 10px 0 45px 0;
+                @include responsive(550px){font-size: 15px;}
+            }
+            button{
+                background-color: #FCC222;
+                border: none;
+                width: fit-content;
+                padding: 18px 35px;
+                font-size: 13px;
+                border-radius: 10px;
+                text-transform: uppercase;
+                font-weight: 800;
+                cursor: pointer;
+                color: #1E1D23;
+                @include responsive(550px){padding: 17px 28px;}
+                &:hover{
+                    color: #FFF;
+                    background-color: #eeac00;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.latestnews{
+    padding: 70px 0;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+}

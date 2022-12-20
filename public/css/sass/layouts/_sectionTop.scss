@@ -1,0 +1,47 @@
+.sectionTop{
+    background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/breadcrumb1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 35px 0;
+    min-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__title{
+            text-transform: capitalize;
+            margin: 0;
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #1E1D23;
+            @include responsive(767px){font-size: 30px;}
+        }
+        &__desc{
+            display: flex;
+            align-items: center;
+            a{text-decoration: none;}
+            p{
+                margin: 0;
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                color: #999999;
+                cursor: pointer;
+                transition: .3;
+                @include responsive(767px){font-size: 15px;}
+                &.title{
+                    color: #1E1D23;
+                    cursor: auto;
+                }
+                &:hover span{
+                    color: #eeac00;
+                }
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 18px;}
+            }
+        }
+    }
+}

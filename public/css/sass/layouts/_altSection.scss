@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Norican&family=Poppins:wght@200;300;500;600;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+.alt__section{
+    margin: -100px 0 40px 0;
+    @include responsive(767px){margin: 0;margin-bottom: 60px;}
+    .section__top{
+        margin: 20px 0;
+        display: grid;
+        gap: 30px;
+        @include responsive(767px){display: flex;flex-wrap: wrap;}
+        .content{
+            max-height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            @include responsive(767px){
+                width: 100%;
+                height: 250px!important;
+            }
+            &.content__left{
+                grid-column: 1 / span 3;
+                grid-row: 1 / span 2;
+                @include responsive(767px){
+                    grid-column: auto;
+                    grid-row: auto;
+                }
+            }
+            &.content__right{
+                grid-column: 6 / span 1;
+                grid-row: 1 / span 2;
+                @include responsive(767px){
+                    grid-column: auto;
+                    grid-row: auto;
+                }
+            }
+            &.content__top{
+                grid-column: 4 / span 2;
+                grid-row: 1 / span 1;
+                min-height: calc(500 / 2);
+                @include responsive(767px){
+                    grid-column: auto;
+                    grid-row: auto;
+                }
+            }
+            &.content__bottom{
+                grid-column: 4 / span 2;
+                grid-row: 2 / span 1;
+                max-height: calc(500 / 2) ;
+                @include responsive(767px){
+                    grid-column: auto;
+                    grid-row: auto;
+                    max-height: 350px;
+                }
+            }
+          .section__bg{
+            transition: .5s;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            height: 100%;
+            padding: 20px;
+            &.left__bg{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/banner1-h3.jpg);
+            }
+            &.top__bg{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/banner2-h3.jpg);
+                .text__content{
+                    .title{color: #FFF;font-size: 2.5rem;}
+                }
+            }
+            &.bottom__bg{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/banner3-h33.jpg);
+                .text__content{
+                    .alt__title{color: #FCC222;}
+                    .title{color: #FFF;font-size: 3rem;}
+                }
+            }
+            &.right__bg{
+                background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/banner4-h3.jpg);
+                .text__content{
+                    text-align: center;
+                    .alt__title{color: #FCC222;}
+                    .title{color: #FFF;font-size: 2.5rem;}
+                    .description{margin: 10px auto;}
+                    button{background-color: #FFF;}
+
+                }
+            }
+            .text__content{
+                .alt__title{
+                    font-size: 30px;
+                    font-weight: 900;
+                    margin: 0;
+                    text-shadow: 1px 0 5px #000;
+                    position: relative;
+                    text-transform: capitalize;
+                    color: #FFF;
+                    font-family: "Norican", cursive;
+                    @include responsive(550px){font-size: 25px;}
+                }
+                .title{
+                    margin: 0;
+                    color: #FCC222;
+                    font-size: 4rem;
+                    line-height: .9;
+                    text-transform: capitalize;
+                    text-shadow: 1px 0 5px #000;
+                    @include responsive(550px){font-size: 3rem;}
+                }
+                .description{
+                    color: #FFF;
+                    margin: 2px 0 15px 0;
+                    text-shadow: 1px 0 5px #000;
+                    width: 55%;
+                    line-height: 1.6;
+                    @include responsive(550px){font-size: 15px;}
+                }
+                button{
+                    background-color: #FFC222;
+                    border: none;
+                    padding: 12px 18px;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    transition: .5s;
+                    cursor: pointer;
+                    @include responsive(550px){font-size: 13px;}
+                    &:hover{
+                        color: #FFF;
+                        background-color: #eeac00;
+                    }
+                }
+            }
+          }
+        }
+    }
+}

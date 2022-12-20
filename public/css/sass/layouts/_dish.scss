@@ -1,0 +1,165 @@
+.dishes__wrapper{
+    border: 1px solid #ededed;
+    border-radius: 20px;
+    padding: 15px;
+    background: #FFF;
+    z-index: 2;
+    position: relative;
+    &.alt__styling{
+        @include responsive(550px){padding: 10px;}
+        &::before{
+           display: none;
+        }
+        .dish_alt_bg{
+            background-color: rgba(247, 242, 226, 0.5215686275);
+            border-radius: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dish__head{
+            padding: 0;
+            &::before{
+                display: none;
+            }
+            .sale__badge, .favorite__badge{display: none;}
+            .dish__img{
+                width: 200px;
+                @include responsive(550px){width: 120px;}
+            }
+            &:hover .dish__img{
+                transform: none;
+            }
+        }
+        .dish__body{
+            padding: 0;
+            margin-right: 25px;
+            .dish__title{font-size: 25px;@include responsive(550px){font-size: 18px;}}
+            .dish__description{line-height: 1.6;font-size: 15px;@include responsive(550px){font-size: 13px;}}
+            .dish__price{
+                margin: 0;
+                .current__price{@include responsive(550px){font-size: 18px;}}
+            }
+            .dish__info{
+                .basket__badge{
+                        @include responsive(550px){position: absolute;right: 6%;bottom: 11%};
+                        .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{@include responsive(550px){font-size: 15px;}}
+                }
+            }
+        }
+    }
+    .dish__head{
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        &::before{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background-color: #f7f2e2;
+            z-index: 1;
+            border-radius: 20px;
+            opacity: .8;
+            transition: .3s;
+        }
+        &:hover::before{
+            height: 100%;
+            background-color: #FFC222;
+        }
+        &:hover .favorite__badge{
+          color: #000;
+        }
+        &:hover .dish__img{
+            transform: scale(1.1);
+        }
+        .dish__img{
+            width: 220px;
+            transition: .3s;
+            position: relative;
+            z-index: 2;
+        }
+        .sale__badge{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #000000a8;
+            color: #FFF;
+            font-weight: 700;
+            border-radius: 20px;
+            padding: 4px 10px;
+            font-size: 13px;
+            z-index: 3;
+        }
+        .favorite__badge{
+            position: absolute;
+            top: 10px ;
+            z-index: 4;
+            right: 10px;
+            color: #ddd;
+            transition: .3s;
+        }
+    }
+    .dish__body{
+        padding: 15px;
+        .rating{margin-bottom: 0;}
+        .dish__title{
+            font-weight: 900;
+            text-transform: capitalize;
+            font-size: 18px;
+            margin: 0;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            color: #1E1D23;
+            // padding: 15px;
+            &.title-mr{margin-top: 0;}
+            &:hover{color: #FFC222;}
+        }
+        .dish__description{
+            font-size: 14px;
+            color: #808080;
+            line-height: 1.5;
+            margin: 0;
+            margin-bottom: 10px;
+            word-break: break-all;
+        }
+        .dish__info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // margin-top: 20px;
+            .old__price{
+                color: #808080;
+                font-weight: 900;
+                margin: 0;
+                text-decoration: line-through;
+            }
+            .current__price{
+                color: #FFC222;
+                font-weight: 900;
+                margin: 0;
+                margin-left: 8px;
+                font-size: 22px;
+            }
+            .basket__badge{
+                background-color: #FFC222;
+                border-radius: 15px;
+                padding: 8px;
+                color: #1E1D23;
+                cursor: pointer;
+                &:hover{
+                    background-color: #eeac00;
+                    color: #FFF;
+                }
+                .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 22px;}
+            }
+        }
+    }
+}

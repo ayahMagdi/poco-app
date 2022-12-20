@@ -1,0 +1,29 @@
+.blogcontainerright{
+    width: 25%;
+    @include responsive(992px){display: none;}
+    .searchcomponent{
+     margin: 0 0 40px 0;
+     input{
+       padding: 20px;
+       border-radius: 5px;
+       font-weight: 500;
+       font-size: 17px;
+     }
+     span{
+       top: 50%;
+       transform: translateY(-50%);
+     }
+   }
+   .blogbanner{
+     border-radius: 10px;
+     height: 500px;
+     width: 100%;
+     overflow: hidden;
+     .toprecipes__info__bg{
+       .toprecipes__info__desc{
+         .alt__title{font-size: 35px;}
+         h3{font-size: 3.5rem;}
+       }
+     }
+   }
+ }

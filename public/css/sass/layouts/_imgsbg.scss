@@ -1,0 +1,19 @@
+.imgs__wrapper{
+    position: relative;
+    padding: 15px 0;
+    .imgs__bg{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        // z-index: -1;
+        .left{
+            transform: translate(-69%, -126%);
+            position: relative;
+            z-index: -1;
+        }
+        .right{
+           transform: translate(126%, -40%) scale(0.8)
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@import '../helpers/mixins';
+@import '../helpers/variables';
+.menu{
+    background-color: #FFF;
+    &__header{
+        @include ds-flex(flex, center , center ,0);
+        .menu__btn{
+            padding: 18px 48px;
+            z-index: 3;
+            margin-top: -28px;
+            @include responsive(550px){font-size: 13px;padding: 15px 35px;}
+        }
+    }
+    &__list{
+        background-color: #FFF;
+        &.green__bg{
+            background-color: $altcolor; 
+            color: #FFF;
+            .menu__body{padding: 30px 0;}
+        }
+        .container{padding: 0;}
+        .menu__body{
+            display: grid;
+            grid-template-columns: repeat(auto-fill , minmax(155px , 1fr));
+            padding: 45px 0 40px 0;
+            overflow: hidden;
+            .menu__list__item{
+                @include ds-flex(flex, flex-start , center , 0);
+                flex-direction: column;
+                position: relative;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom: 40px;
+                &:last-of-type{margin-bottom: 0;}
+                &:nth-child(7){margin-bottom: 0;}
+                &:hover .item__title{color: $maincolor}
+                &:hover .menu__bg{
+                    transform: translate(-50%,-50%) scale(.8)!important;
+                    @include responsive(550px){transform: translate(-50%,-50%) scale(.6)!important;}
+                  }
+                .menu__image{
+                    height: 80px;
+                    margin-bottom: 5px;
+                    position: relative;
+                    @include responsive(550px){height: 65px;}
+                    .menu__bg{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%) scale(0);
+                        transition: .3s;
+                        z-index: 1;
+                    }
+                    .menu__img{
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        z-index: 2;
+                        @include responsive(550px){transform: translate(-50%,-50%) scale(.7);}
+                    }
+                }
+                .item__title{
+                    margin: 0;
+                    position: relative;
+                    z-index: 2;
+                    text-transform: capitalize;
+                    transition: .5s;
+                    letter-spacing: -1;
+                }
+            }
+        }
+    }
+}

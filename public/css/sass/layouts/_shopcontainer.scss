@@ -1,0 +1,91 @@
+.shopcontainer{
+    padding: 70px 0;
+    &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      gap: 2%;
+      .shopcontainer__left{
+        width: 73%;
+        @include responsive(992px){width: 100%;}
+        .shoptop{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 30px;
+          .shopfiltericon{
+            display: none;
+            color: #1E1D23;
+            cursor: pointer;
+            .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{font-size: 22px;}
+            @include responsive(550px){display: block;}
+           }
+          .resultsnumber{
+            @include responsive(550px){display: none;}
+              p{
+                  color: #808080;
+                  font-size: 14px;
+                  span{margin: 0 5px;}
+              }
+          }
+          .shopsort{
+             display: flex;
+             align-items: center;
+             gap: 10px;
+             .css-i4bv87-MuiSvgIcon-root , .MuiSvgIcon-root{
+               color: #808080;
+               font-size: 18px;
+               cursor: pointer;
+               margin-right: 3px;
+               &.active{color: #1E1D23;}
+             }
+             .sortprods{
+               background-color: #fbf7e8;
+               padding: 17px 10px;
+               select{
+                  color: #1E1D23;
+                  background-color: #fbf7e8;
+                  font-size: 14px;
+                  cursor: pointer;
+                  border: none;
+                  outline: none;
+               }
+             }
+          }
+        }
+        .alt__styling{
+          .dish_alt_bg{
+            justify-content: flex-start;
+            gap: 15px;
+            .dish__body{
+              .dish__info{
+                .basket__badge{
+                  position: absolute;
+                  right: 25px;
+                  bottom: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .shopcontainer__right{
+        width: 25%;
+        @include responsive(992px){display: none;}
+        .shopfilter{
+          .searchcomponent{
+            margin: 40px 0;
+            input{
+              padding: 20px;
+              border-radius: 5px;
+              font-weight: 500;
+              font-size: 17px;
+            }
+            span{
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+}

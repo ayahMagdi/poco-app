@@ -1,0 +1,95 @@
+.wishlist__container{
+    .wishlist__product{
+        border: 1px solid #e5e5e5;
+        border-bottom: none;
+        display: flex;
+        gap: 15px;
+        &:nth-child(even) {background: rgba(0,0,0,.03)}
+        &:last-of-type{border-bottom: 1px solid #e5e5e5;}
+        &:hover{background-color: rgba(0,0,0,.05);}
+        &__info{
+            display: flex;
+            gap: 10px;
+            flex: 1;
+            .image{
+                border-right: 1px solid #e5e5e5;
+                padding: 10px;
+                img{width: 100px;}
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h3{
+                    margin: 0;
+                    color: #FCC222;
+                    font-size: 17px;
+                    cursor: pointer;
+                    @include responsive(550px){font-size: 15px;}
+                }
+                p{
+                    .old__price{
+                        margin-right: 8px;
+                        font-weight: normal;
+                        text-decoration: line-through;
+                    }
+                    margin: 0;
+                    color: #808080;
+                    &.price{
+                        font-weight: 900;
+                        margin: 8px 0;
+                        @include responsive(550px){font-size: 15px;}
+                    }
+                    &.date{
+                        font-size: 15px;
+                        @include responsive(550px){font-size: 12px;}
+                    }
+                }
+            }
+     }
+     &__cart{
+        width: 30%;
+        padding: 0 10px;
+        border-left: 1px solid #e5e5e5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        p{
+            margin: 0;
+            &.in__stock{
+                color: #808080;
+                text-transform: capitalize;
+                font-size: 14px
+            }
+            &.cart{
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+                color: #1E1D23;
+                @include responsive(550px){font-size: 12px;}
+                &:hover{color: #FCC222;}
+            }
+        }
+     }
+    }
+    .wishlist__social{
+      margin: 20px 0;
+      .social{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p{
+            color: #808080;
+            // margin-right: 10px;
+        }
+        span{
+            color: #FCC222;
+            font-size: 15px;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+      }
+    }
+}

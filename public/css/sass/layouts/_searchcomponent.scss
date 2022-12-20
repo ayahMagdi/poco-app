@@ -1,0 +1,18 @@
+.searchcomponent{
+    position: relative;
+    input{
+        width: 100%;
+        padding: 15px 25px;
+        border-radius: 15px;
+        outline: none;
+        border: none;
+        background: #fbf7e8;
+        text-transform: capitalize;
+    }
+    span{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        cursor: pointer;
+    }
+}

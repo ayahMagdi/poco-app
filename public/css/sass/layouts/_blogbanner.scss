@@ -1,0 +1,39 @@
+.toprecipes__info__bg{
+        background-image: url(https://demo2wpopal.b-cdn.net/poco/wp-content/uploads/2020/09/h1_banner-4.jpg);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: cover;
+        height: 100%;
+        padding: 20px;
+        .toprecipes__info__desc{
+            text-align: center;
+            .alt__title{
+            color: #FFF;
+            font-family: 'Norican', cursive;
+            text-transform: capitalize;
+            font-size: 38px;
+            margin: 0;
+            }
+            h3{
+                margin:0;
+                font-size: 5vw;
+                text-transform: uppercase;
+                font-weight: 800;
+                color: #f00000;
+                margin-bottom: 20px;
+            }
+            p{
+                color: #FFF;
+                font-weight: 900;
+                text-transform: uppercase;
+                font-size: 18px;
+                margin: 0;
+                span{
+                    display: block;
+                    color: #f00000;
+                    font-size: 30px;
+                    margin-top: 6px;
+                }
+            }
+        }
+ }

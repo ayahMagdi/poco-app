@@ -1,0 +1,19 @@
+.quantity{
+    button{
+       cursor: pointer;
+       border-radius: 50%;
+       border: none;
+       background-color: #f7f4ef;
+       color: #000;
+       width: 30px;
+       height: 30px;
+       font-weight: bold;
+       font-size: 18px;
+       transition: .3s;
+       &:hover{color: #eeac00;}
+    }
+    span{
+     margin: 0 10px;
+     font-weight: bold;
+    }
+ }

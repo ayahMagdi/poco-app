@@ -1,0 +1,24 @@
+.blogcontainer{
+    padding: 70px 0;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 2%;
+        @include responsive(767px){justify-content: center;}
+        .blogcontainerleft{
+            width: 73%;
+            @include responsive(992px){width: 100%;}
+            .card{
+                margin-bottom: 40px;
+                &:hover img{transform: none;}
+                &__body{
+                    &__title{
+                        font-size: 30px;
+                        margin-bottom: 10px;
+                        @include responsive(550px){font-size: 25px;}
+                    }
+                }
+            }
+        }
+    }
+}
